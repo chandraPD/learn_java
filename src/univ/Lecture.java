@@ -56,7 +56,7 @@ public class Lecture extends Person{
 	public void printCourse() {
 		System.out.println("Begin Print Course Lecture");
 		int no = 0;
-		System.out.println("Total Matkul yang diajar : "+ numCourses + "Matkul");
+		System.out.println("Total Matkul yang diajar : "+ numCourses + " Matkul");
 		for (int i = 0; i < numCourses; ++i) {
 			System.out.println(" Course "+ ++no +"  : " + courses[i]);
 		}

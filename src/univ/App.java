@@ -16,7 +16,8 @@ public class App {
 		s2.learningPlan("Skripsi", 14, "101");
 		s2.learningPlan("Skripsi2", 3, "102");
 		s2.printCourse();
-		// Test Teacher class
+		
+		// Test Lecture class
 		Lecture t1 = new Lecture("Dinata ", "Ayani");
 		System.out.println(t1);
 		String[] courses = { "Aritmatika", "Skripsi", "Sidang","Skripsi" };
