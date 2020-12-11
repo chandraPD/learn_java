@@ -62,7 +62,7 @@ public class Penjualan {
 						System.out.println(++no + ") Back");
 						int sumPaket = listMenu[0].length + 1;
 						int sumMakanan = listMenu[1].length + sumPaket;
-						int sumMinuman = listMenu[1].length + sumMakanan;
+						int sumMinuman = listMenu[1].length + sumMakanan - 1;
 						System.out.print("Pilih Menu / Back / Bayar : ");
 						opsi = Integer.valueOf(sc.nextLine());
 //						Pilih Opsi for Paket
@@ -81,12 +81,12 @@ public class Penjualan {
 							i = 2;
 							pickJumlah = true;
 						} else if (opsi == no) {
+							pickJumlah = false;
 							break allMenu;
 						} else {
 							pickJumlah = false;
 							System.out.println("Angka yang diinputkan Salah, Coba Lagi...");
 						}
-
 						if (pickJumlah) {
 //						jika paket yang dipilih, kurangin opsi dengan angka 1 untuk mengambil data dan tanyakan jumlah
 //						jika makanan yang dipilih, opsi kurangin sumPaket
@@ -127,7 +127,7 @@ public class Penjualan {
 					}
 					allMenu: while (true) {
 						no = 0;
-						ShowMenu(i);
+						showMenu(i);
 						System.out.println(++no + ") Back");
 						System.out.print("Pilih Menu / Back / Bayar : ");
 						opsi = Integer.valueOf(sc.nextLine());
@@ -183,11 +183,11 @@ public class Penjualan {
 
 		no = 0;
 		for (int i = 0; i < listMenu.length; i++) {
-			ShowMenu(i);
+			showMenu(i);
 		}
 	}
 
-	public static void ShowMenu(Integer i) {
+	public static void showMenu(Integer i) {
 		if (i == 0) {
 			System.out.println("=== List Paket ===");
 		} else if (i == 1) {
